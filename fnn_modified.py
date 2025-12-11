@@ -430,7 +430,6 @@ print("\nPlot the accuracy")
 plt.figure(figsize=(10, 6))
 
 # Alexander Rivera: Handle both old and new Keras history key names
-# Older versions use 'acc', newer versions use 'accuracy'
 accuracy_key = 'accuracy' if 'accuracy' in classifierHistory.history else 'acc'
 plt.plot(classifierHistory.history[accuracy_key])
 plt.title(f'Model Accuracy - Scenario {SCENARIO}')
